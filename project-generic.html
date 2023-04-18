@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Nikola, Durinec, Đurinec, MrCool92, Unity Developer">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Nikola Đurinec | Senior Unity Developer | Project</title>
+</head>
+
+<body>
+    <main>
+        <button class="toggle-theme" id="toggle-theme" aria-label="Toggle theme"><i id="theme-icon"
+                class="fa-solid"></i></button>
+        <header>
+            <h1 style="margin-bottom: 0;">Nikola Đurinec</h1>
+            <h5 style="margin-top: 0;">Senior Unity Developer</h5>
+            <nav>
+                <a href="index.html" class="">about</a>
+                <a href="projects.html" class="">projects</a>
+                <a href="https://github.com/MrCool92">github</a>
+                <a href="https://www.linkedin.com/in/nikola-durinec/" target="_blank" rel="noopener">linkedin</a>
+                <a href="mailto:durinec.nikola@gmail.com"
+                    onClick="javascript:window.open('mailto:durinec.nikola@gmail.com', 'mail');event.preventDefault()"
+                    target="_blank" rel="noopener">email</a>
+            </nav>
+        </header>
+
+        <div class="divider-container">
+            <div class="divider"></div>
+        </div>
+        <h2>Project XY</h2>
+
+        <div class="content">
+            <div id="fullscreen" class="project-image-fullscreen">
+                <button class="close" id="close">&times;</button>
+                <button class="arrow-left" id="arrow-left">&lang;</button>
+                <button class="arrow-right" id="arrow-right">&rang;</button>
+            </div>
+            <div class="project-images">
+                <img id="image-1" alt="Project generic preview image 1" src="./styles/assets/ihrb/ProjectImg1.avif" />
+                <img id="image-2" alt="Project generic preview image 2" src="./styles/assets/ihrb/ProjectImg2.avif" />
+                <img id="image-3" alt="Project generic preview image 3" src="./styles/assets/ihrb/ProjectImg3.avif" />
+                <img id="image-4" alt="Project generic preview image 4" src="./styles/assets/ihrb/ProjectImg4.avif" />
+                <img id="image-5" alt="Project generic preview image 5" src="./styles/assets/ihrb/ProjectImg5.webp" />
+                <img id="image-6" alt="Project generic preview image 6" src="./styles/assets/ihrb/ProjectImg6.jpg" />
+                <img id="image-7" alt="Project generic preview image 7" src="./styles/assets/ihrb/ProjectImg7.jpg" />
+            </div>
+            <p>
+                I took full responsibility to port Vlambeer's Luftrausers gamemaker build into native c+ + and had two
+                experienced programmers join to help with this huge task.
+                With two fellow programmers we created a framework in c+ + that was easily compiled to other platforms
+                and ported the gamemaker code and assets over to this environment.
+                Big challenges were keeping up with changing design from Vlambeer, getting performance up on the PS
+                Vita, supporting each platforms own social API (Steam, PS3, PS Vita, Gog) and getting through all of the
+                TRCs from Sony.
+                Being a huge task for three people who were also studying and doing internships at the same time as
+                this, it was an incredible educational project, and my first fully shipped cross-platform title!
+            </p>
+            <div class="features-container">
+                <div class="features">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Windows, Linux, MacOSX, Playstation Vita, Playstation 3
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Own built c+ + framework/engine</li>
+                        <li><i class="fa-solid fa-check"></i> Social API integrations</li>
+                        <li><i class="fa-solid fa-check"></i> Working with original developers, publishers and
+                            first-party (Stream, GoG and Sony)</li>
+                    </ul>
+                </div>
+                <div class="references">
+                    <h3>References</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-arrow-right"></i> Official <a href="www.google.hr"
+                                target="_blank">PROJECTXY</a> website</li>
+                        <li><i class="fa-solid fa-arrow-right"></i> Publisher <a href="www.google.hr"
+                                target="_blank">devolverdigital</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i> <a href="www.google.hr" target="_blank">Steam
+                                store</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i> <a href="www.google.hr" target="_blank">Playstation
+                                store</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i> <a href="www.google.hr"
+                                target="_blank">Metacritics</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-container">
+            <div class="divider"></div>
+        </div>
+
+        <footer>© 2025 Nikola Đurinec</footer>
+    </main>
+
+    <script src="dark-mode.js"></script>
+
+    <script>
+        const images = document.querySelectorAll('img[id^="image-"]')
+        const fullscreen = document.getElementById('fullscreen')
+        const close = document.getElementById('close')
+        const left = document.getElementById('arrow-left')
+        const right = document.getElementById('arrow-right')
+
+        const createNewImageElement = (image) => {
+            let fullscreenImage = document.createElement("img");
+            fullscreenImage.id = image.id;
+            fullscreenImage.src = image.src;
+            fullscreenImage.alt = image.alt;
+
+            return fullscreenImage;
+        }
+
+        images.forEach(image => {
+            image.addEventListener('click', (e) => {
+                var fullscreenImage = createNewImageElement(image);
+                fullscreen.appendChild(fullscreenImage);
+                fullscreen.classList.add("visible");
+            });
+        });
+
+        const closeImage = () => {
+            fullscreen.classList.remove('visible');
+            fullscreen.removeChild(fullscreen.lastChild);
+        }
+
+        close.addEventListener('click', (e) => {
+            closeImage();
+        });
+
+        const findImageIndex = (currentImageId) => {
+            for (let i = 0; i < images.length; i++) {
+                if (images[i].id === currentImageId) return i;
+            }
+        }
+
+        const LEFT = 'LEFT';
+        const RIGHT = 'RIGHT';
+
+        const isPositionValid = (position) => position && (position === LEFT || position === RIGHT);
+
+        const iterateImage = (position) => {
+            const currentImageId = fullscreen.lastChild.id;
+            let currentImageIndex = findImageIndex(currentImageId);
+            if (!isPositionValid(position) && !currentImageIndex && currentImageIndex !== 0) {
+                closeImage();
+            }
+            let nextImageIndex = position === LEFT ? images.length - 1 : 0;
+            if (position === LEFT) {
+                if (currentImageIndex - 1 >= 0) {
+                    nextImageIndex = currentImageIndex - 1;
+                }
+            } else { // Due to the isPositionValid check, we are sure the only other option is RIGHT
+                if (currentImageIndex + 1 < images.length) {
+                    nextImageIndex = currentImageIndex + 1;
+                }
+            }
+            fullscreen.removeChild(fullscreen.lastChild);
+            let nextImage = images[nextImageIndex];
+            let fullscreenImage = createNewImageElement(nextImage);
+            fullscreen.appendChild(fullscreenImage);
+        }
+
+        left.addEventListener('click', (e) => {
+            iterateImage(LEFT);
+        });
+
+        right.addEventListener('click', (e) => {
+            iterateImage(RIGHT);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const code = e.which || e.keyCode;
+            // On Escape key press
+            if (code === 27 && fullscreen.classList.contains('visible')) {
+                closeImage();
+            }
+            // On left arrow/a key press
+            if ((code === 37 || code === 65) && fullscreen.classList.contains('visible')) {
+                iterateImage(LEFT);
+            }
+            // On right arrow/d key press
+            if ((code === 39 || code === 68) && fullscreen.classList.contains('visible')) {
+                iterateImage(RIGHT);
+            }
+        });
+    </script>
+</body>
+
+</html>

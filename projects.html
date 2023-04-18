@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="keywords" content="Nikola, Durinec, Đurinec, MrCool92, Unity Developer">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Nikola Đurinec | Senior Unity Developer | Projects</title>
+</head>
+
+<body>
+    <main>
+        <button class="toggle-theme" id="toggle-theme" aria-label="Toggle theme"><i id="theme-icon"
+                class="fa-solid"></i></button>
+        <header>
+            <div class="avatar-container">
+                <img class="avatar" id="image-avatar" alt="Avatar" src="assets/avatar.png" />
+            </div>
+            <h1 style="margin-bottom: 0;">Nikola Đurinec</h1>
+            <h5 style="margin-top: 0;">Senior Unity Developer</h5>
+            <nav>
+                <a href="index.html" class="">about</a>
+                <a class="active" href="projects.html" class="">projects</a>
+                <a href="https://github.com/MrCool92">github</a>
+                <a href="https://www.linkedin.com/in/nikola-durinec/" target="_blank" rel="noopener">linkedin</a>
+                <a href="mailto:durinec.nikola@gmail.com"
+                    onClick="javascript:window.open('mailto:durinec.nikola@gmail.com', 'mail');event.preventDefault()"
+                    target="_blank" rel="noopener">email</a>
+            </nav>
+            
+        </header>
+
+        <div class="divider-container">
+            <div class="divider"></div>
+        </div>
+
+        <div class="content">
+            <div id="fullscreen" class="project-image-fullscreen">
+                <div class="fullscreen-elements">
+                    <button class="close" id="close"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="arrow-left" id="arrow-left"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-right" id="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <p>These are some of the projects I contributed to or worked on.</p>
+
+            <div class="project">
+                <img id="image-lang" alt="Bajs Compiler" src="assets/lang/lang-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Bajs Compiler</p>
+                            <!-- <div class="repos">
+                                <a class="repo" href="https://github.com/MrCool92/unity-vat" target="_blank"
+                                    aria-label="GitHub Page">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div> -->
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech cpp">C++</span>
+                            <span class="project-tech asm">Assembly</span>
+                            <span class="project-tech bash">Bash</span>
+                            <span class="project-tech js">JavaScript</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            Custom compiler for my own programming language named Bajs (working name), inspired by Jonathan Blow's Jai.
+                            Built on the principle of explicit writing: what you see is what you get, with no hidden magic under the hood.
+                            <br /><br />
+                            For now it supports functions, local variables, operators, conditionals, loops, scan, print and comments.
+                            Also includes a full test suite and a VSCode syntax highlighter with compile-and-run integration.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-vat" alt="VAT preview image" src="assets/vat/vat-1.jpg" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Vertex Animation Textures</p>
+                            <div class="repos">
+                                <a class="repo" href="https://github.com/MrCool92/unity-vat" target="_blank"
+                                    aria-label="GitHub Page">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech ecs">ECS</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            Vertex Animation Textures are a technique for storing vertex data in textures, which can
+                            then be used to efficiently animate models in real-time. This method reduces the
+                            computational cost of animation by offloading it to GPU shaders.
+                            <br /><br />
+                            I needed an efficient way to animate large numbers of enemies on screen for my next project,
+                            so I've been exploring VAT within an ECS environment.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-tbd" alt="Toca Boca Days preview image" src="assets/tbd/tbd-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Toca Boca Days</p>
+                            <div class="repos">
+                                <a class="repo" href="https://tocaboca.com/toca-boca-days" target="_blank"
+                                    aria-label="Toca Boca Days Home Page">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                        </div>
+
+                        <p class="project-details">
+                            A vibrant online 3D multiplayer game designed for tweens, offering an engaging and
+                            interactive world where players can explore, create, and shape their own unique stories in a
+                            colorful and dynamic environment.
+                            <br /><br />
+                            My job was to optimize game server and client aplications.
+                        </p>
+
+                    </div>
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-fte" alt="The Forgotten Echos preview image" src="assets/tfe/tfe-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>The Forgotten Echos</p>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech inky">Inky</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            <!-- TODO -->
+                            The Forgotten Echos is a visual novel set in space. It features rich dialogue and intricate
+                            puzzles. This was done in an in-house framework for visual novels.
+                            <br /><br />
+                            The entire game's logic was completed in just a few weeks.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-arpg-2" alt="ARPG project #2 preview image" src="assets/arpg-2/arpg-2-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>ARPG project #2</p>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unreal">Unreal Engine</span>
+                            <span class="project-tech cpp">C++</span>
+                            <span class="project-tech perforce">perforce</span>
+                        </div>
+
+                        <p class="project-details">
+                            <!-- TODO -->
+                            A 3D isometric RPG with souls-like combat and a unique dimension-jumping mechanic. Precise
+                            animations control movement, dodging, and attacks, while players can shift between red,
+                            green, and blue dimensions to weaken enemies by removing their color.
+                            <br /><br />
+                            My first serious project in Unreal. This is where I have implemented enemy AI behaviour like
+                            in Marvel's Spider-Man.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-survival-2" alt="Survival project #2 preview image"
+                    src="assets/survival-2/survival-2-2.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Survival project #2</span>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech mlapi">MLAPI</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            A multiplayer first-person game that explores socially conscious narrative themes
+                            like prejudice and unity within a playful yet thought-provoking context. The project
+                            balances humor and depth, offering players a compelling mix of action, strategy, and
+                            storytelling in an imaginative setting.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-arpg-1" alt="ARPG project #1 preview image" src="assets/arpg-1/arpg-1-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>ARPG project #1</p>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            <!-- TODO -->
+                            A 3D isometric role-playing game which blends classic gameplay mechanics with innoive
+                            twists within a distinctive world. Here the biggest challenge was managing thousands of
+                            ragdoll enemies rushing towards the player.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-rw" alt="Rolla World project preview image" src="assets/rw/rw-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Rolla World</p>
+                            <div class="repos">
+                                <a class="repo" href="https://www.rolla.app/world" target="_blank"
+                                    aria-label="Toca Boca Days Home Page">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            Rolla World is an online multiplayer game where you and your colleagues can encourage each
+                            other while working out together.
+                            <br /><br />
+                            My job was to develop a bicycle collision avoidance system and implement VAST streaming
+                            support for Universal Windows Platform build.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-fallout" alt="Unity - Fallout project preview image"
+                    src="assets/fallout/fallout-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Unity - Fallout</p>
+                            <div class="repos">
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech asm">Assembly</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            Hobby project that aims to remake classic Fallout 1 and 2 using the Unity engine, with the
+                            end goal of incorporating a 2D-to-3D switch. It's my first serious attempt to hone my
+                            reverse engineering skills.
+                            <br /><br />
+                            No game files are ripped; everything is loaded from the installed game data.
+                            So far, I've implemented the menu, character selection, level loading, scenery objects,
+                            movies, music, sounds, fonts and pathfinding. It's still a work in progress.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-survival-1" alt="Survival project #1 preview image"
+                    src="assets/survival-1/survival-1-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Survival project #1</p>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech bash">Bash</span>
+                            <span class="project-tech mlapi">MLAPI</span>
+                            <span class="project-tech photon">photon</span>
+                            <span class="project-tech fmod">fmod</span>
+                            <span class="project-tech git">git</span>
+                        </div>
+
+                        <p class="project-details">
+                            A multiplayer science-fantasy first-person shooter set in a unique world full of danger.
+                            <br /><br />
+                            I contributed to all aspects of the game, including world streaming, server-authoritative
+                            movement, client-side prediction, lag compensation, crafting, player control, base building,
+                            harvesting, stats, skills, quests, enemies...
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-ihrb" alt="I Hate Running Backwards preview image" src="assets/ihrb/ihrb-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>I Hate Running Backwards</p>
+                            <div class="repos">
+                                <a class="repo"
+                                    href="https://store.steampowered.com/app/575820/I_Hate_Running_Backwards/"
+                                    target="_blank" aria-label="Steam Page">
+                                    <i class="fa-brands fa-steam"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech hg">hg</span>
+                        </div>
+
+                        <p class="project-details">
+                            An endless, action-packed shoot-'em-up roguelite that focuses on intense combat and
+                            destruction, where players battle endless waves of enemies while time traveling through
+                            procedurally generated worlds.
+                            <br /><br />
+                            My first fully shipped cross-platform title!
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-ml" alt="Monster Loops preview image" src="assets/ml/ml-1.webp" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Monster Loops</p>
+                            <div class="repos">
+                                <a class="repo" href="https://www.moddb.com/games/monster-loops" target="_blank"
+                                    aria-label="GitHub Page">
+                                    <i class="fa-solid fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech hg">hg</span>
+                        </div>
+
+                        <p class="project-details">
+                            A fast-paced arcade puzzle game for mobile devices where the objective is to achieve the
+                            highest score. Collecting more monsters boosts your score multiplier, and trapping
+                            additional monsters within your selection increases the multiplier even further, unlocking
+                            special power-ups.
+                            <br /><br />
+                            I contributed to every aspect of the game. It turned out to be my first published mobile
+                            project!
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-zr" alt="Zero Reflex preview image" src="assets/zr/zr-1.jpg" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Zero Reflex</p>
+                            <div class="repos">
+                                <a class="repo"
+                                    href="https://store.steampowered.com/app/405650/Zero_Reflex__Black_Eye_Edition/"
+                                    target="_blank" aria-label="Steam Page">
+                                    <i class="fa-brands fa-steam"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                        </div>
+
+                        <p class="project-details">
+                            A fast-paced game filled with challenges that tests your reflexes and patience.
+                            <br /><br />
+                            My job was to implement the in-game shop and ads.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-bwm" alt="Bear With Me - Episode One preview image" src="assets/bwm/bwm-1.jpg" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Bear With Me - Episode One</p>
+                            <div class="repos">
+                                <a class="repo"
+                                    href="https://store.steampowered.com/app/492630/Bear_With_Me__Episode_One/"
+                                    target="_blank" aria-label="Steam Page">
+                                    <i class="fa-brands fa-steam"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                        </div>
+
+                        <p class="project-details">
+                            A noir-style episodic adventure game where Amber embarks on a search for her
+                            missing brother, with the help of her loyal companion, Ted E. Bear.
+                            <br /><br />
+                            My role involved developing and enhancing puzzles, fixing bugs, and customizing the
+                            Adventure Creator plugin to align with the project's specific requirements.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-ftl" alt="Follow The Leader preview image" src="assets/ftl/ftl-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Follow The Leader</p>
+                            <div class="repos">
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech unity">Unity</span>
+                            <span class="project-tech c-sharp">C#</span>
+                            <span class="project-tech hg">hg</span>
+                        </div>
+
+                        <p class="project-details">
+                            A narrative-based game about a brave heroes who saved the world. The environment is changing
+                            in real-time as the narrator addresses certain features.
+                            <br /><br />
+                            My first serious project in Unity.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-sudoku" alt="Sudoku Puzzles preview image" src="assets/sudoku/sudoku-1.png"
+                    style="min-width: 220px;" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Sudoku Puzzles</p>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech gamemaker">Game Maker</span>
+                            <span class="project-tech gml">GML</span>
+                        </div>
+
+                        <p class="project-details">
+                            A classic Sudoku game featuring three difficulty levels. The game includes helpful hint
+                            system to assist players and a built-in solver.
+                            Additionally, players can print their puzzles, and the game supports saving and loading
+                            progress.
+                            <br /><br />
+                            The puzzles in magazines weren't enough for me, so I decided to create my own. I was also
+                            curious about how to implement a Sudoku solver, so it became a fun challenge.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <img id="image-poker" alt="Five of a Kind preview image" src="assets/poker/poker-1.png" />
+                <div class="project-content-container">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <p>Five of a Kind</p>
+                            <div class="repos">
+                                <!-- <a class="repo" href=".." target="_blank" aria-label="GitHub Page">
+                                    <i class="fa-brands fa-github"></i>
+                                </a> -->
+                            </div>
+                        </div>
+
+                        <div class="project-technologies">
+                            <span class="project-tech gamemaker">Game Maker</span>
+                            <span class="project-tech gml">GML</span>
+                        </div>
+
+                        <p class="project-details">
+                            A video poker game typically found in casinos and bars, providing a
+                            straightforward gambling experience.
+                            <br /><br />
+                            As a kid, I enjoyed playing video poker, but I was never a fan of gambling. So, I put
+                            together this project in Game Maker 7 just for fun, making it something my friends and
+                            I could enjoy without the stakes.
+                        </p>
+                    </div>
+
+                    <!-- <div class="project-more-container">
+                        <a class="project-more" href="project-generic.html">Read more</a>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="divider-container">
+            <div class="divider"></div>
+        </div>
+
+        <footer>© 2025 Nikola Đurinec</footer>
+    </main>
+
+    <script src="dark-mode.js"></script>
+    <script src="img-preview.js"></script>
+</body>
+
+</html>
