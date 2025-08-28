@@ -3,10 +3,11 @@ const ctx = canvas.getContext('2d');
 
 let dotSpacing = 56;
 let dotRadius = 2;
-let speed = 0.2;
+let speed = 0.14;
 
-let offsetX = 0;
-let offsetY = 0;
+// Restore saved offset or start at 0
+let offsetX = parseFloat(localStorage.getItem('dotsOffsetX')) || 0;
+let offsetY = parseFloat(localStorage.getItem('dotsOffsetY')) || 0;
 
 function resize() {
     canvas.width = window.innerWidth;
@@ -41,3 +42,9 @@ function draw() {
 }
 
 draw();
+
+// Save offsets before leaving the page
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('dotsOffsetX', offsetX);
+    localStorage.setItem('dotsOffsetY', offsetY);
+});
