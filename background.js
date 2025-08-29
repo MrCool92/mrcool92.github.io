@@ -2,8 +2,8 @@ const canvas = document.getElementById('dots');
 const ctx = canvas.getContext('2d');
 
 let dotSpacing = 56;
-let dotRadius = 2;
-let speed = 0.14;
+let dotRadius = 2.5;
+let speed = 0.03;
 
 // Restore saved offset or start at 0
 let offsetX = parseFloat(localStorage.getItem('dotsOffsetX')) || 0;
@@ -45,7 +45,7 @@ function draw() {
             const y = (row * dotSpacing + offsetY) % (rows * dotSpacing);
 
             const phase = row * 0.3 + col * 0.4; // deterministic per dot
-            const r = dotRadius + Math.sin(time + phase) * 1.2;
+            const r = dotRadius + Math.sin(time + phase);
 
             ctx.beginPath();
             ctx.arc(x, y, r, 0, Math.PI * 2);
