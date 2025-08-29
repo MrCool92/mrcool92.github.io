@@ -24,13 +24,20 @@ function draw() {
     const rows = Math.ceil(canvas.height / dotSpacing) + 1;
     const cols = Math.ceil(canvas.width / dotSpacing) + 1;
 
+    const time = performance.now() * 0.002; // slower wave
+
     for (let row = 0; row < rows; row++) {
         const rowOffset = row % 2 === 0 ? 0 : dotSpacing / 2;
         for (let col = 0; col < cols; col++) {
-            const x = (col * dotSpacing + rowOffset + offsetX) % (cols * dotSpacing);
-            const y = (row * dotSpacing + offsetY) % (rows * dotSpacing);
+            let x = (col * dotSpacing + rowOffset + offsetX) % (cols * dotSpacing);
+            let y = (row * dotSpacing + offsetY) % (rows * dotSpacing);
+
+            // --- staggered radius effect ---
+            const phase = (row * 0.3 + col * 0.4); // unique per dot
+            const r = dotRadius + Math.sin(time + phase) * 1.2; // pulsing radius
+
             ctx.beginPath();
-            ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
+            ctx.arc(x, y, r, 0, Math.PI * 2);
             ctx.fill();
         }
     }
@@ -40,6 +47,7 @@ function draw() {
 
     requestAnimationFrame(draw);
 }
+
 
 draw();
 
